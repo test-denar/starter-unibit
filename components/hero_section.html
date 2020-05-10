@@ -1,0 +1,37 @@
+{% set section = include_dict.section %}
+<section {{ classNames('hero', 'section', { 'bg-gray': section.background_color == 'gray', 'bg-blue': section.background_color == 'blue', 'has-bg-image': section.background_image }) }}>
+
+  {% if section.background_image %}
+  <div class="bg-image" style="background-image: url('{{ section.background_image | relative_url }}')"></div>
+  {% endif %}
+
+  <div class="container">
+    <div class="section__content flex flex--middle">
+
+      {% if section.image %}
+      <div class="section__media cell">
+        <img src="{{ section.image | relative_url }}" alt="{{ section.title }}" />
+      </div>
+      {% endif %}
+
+      <div class="section__body cell">
+        {% if section.title %}
+        <h1 class="section__title">{{ section.title }}</h1>
+        {% endif %}
+        {% if section.subtitle %}
+        <div class="section__copy">
+          <p>{{ section.subtitle }}</p>
+        </div>
+        {% endif %}
+        {% if section.actions %}
+        <div class="section__cta">
+          {% set include_dict = {'actions': section.actions} %}
+          {% include "cta_buttons.html" %}
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+
+</section>

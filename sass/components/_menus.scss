@@ -1,0 +1,24 @@
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    color: $grayish-blue;
+    line-height: 1.2;
+
+    &.is-active {
+      color: $blue;
+    }
+  }
+
+  a {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}

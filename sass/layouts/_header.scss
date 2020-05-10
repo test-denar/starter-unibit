@@ -1,0 +1,49 @@
+.site-header {
+  border-bottom: 1px solid $grayish-blue-light;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+}
+
+.navbar__logo,
+.navbar__title {
+  flex: 0 1 auto;
+  text-decoration: none;
+}
+
+.navbar__logo {
+  img {
+    height: 2em;
+  }
+}
+
+.navbar__title {
+  color: $grayish-blue-dark;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.navbar__menu {
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 801px) {
+  .navbar__menu {
+    align-items: center;
+    display: flex;
+  }
+
+  .navbar__item {
+    font-size: 0.875em;
+    margin-left: 0.75em;
+  }
+
+  .js-menu-toggle {
+    display: none;
+  }
+}

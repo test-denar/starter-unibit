@@ -1,0 +1,44 @@
+{% extends "body.html" %}
+
+{% block content %}
+
+<article class="post post--full">
+  <div class="container">
+
+    {% if page.params.image %}
+    <div class="post__image">
+      <img src="{{ page.params.image | relative_url }}" alt="{{ page.params.title }}" />
+    </div>
+    {% endif %}
+
+    <header class="post__header">
+      <p class="post__meta"><time datetime="{{page.date | date_format("%Y-%m-%d %H:%M") }}">{{ page.date | date_format("%B %d, %Y") }}</time></p>
+      <h1 class="post__title">{{ page.params.title }}</h1>
+      <p class="post__byline">
+        {% if page.params.author %}
+        by <a href="{{ '/blog/author/' | append( page.params.author.slug ) }}">{{ page.params.author.first_name }}{% if page.params.author.last_name %} {{ page.params.author.last_name }}{% endif %}</a>
+        {% endif %}
+
+        {% if page.params.categories %}
+        in
+        {% set include_dict = {'categories': page.params.categories} %}
+        {% include "post_categories.html" %}
+        {% endif %}
+      </p>
+    </header>
+
+    <div class="post__body">
+      {{ page.content }}
+    </div>
+
+    {% if page.params.tags %}
+    <footer class="post__footer">
+      {% set include_dict = {'tags': page.params.tags} %}
+      {% include "post_tags.html" %}
+    </footer>
+    {% endif %}
+
+  </div>
+</article>
+
+{% endblock %}

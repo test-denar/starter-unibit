@@ -1,0 +1,17 @@
+{% extends "body.html" %}
+
+{% block content %}
+
+<div class="hero">
+  <div class="container">
+    <h1 class="post__title">{{ page.params.title }}</h1>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    {{ page.content }}
+  </div>
+</div>
+
+{% endblock %}

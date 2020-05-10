@@ -1,0 +1,34 @@
+{% set section = include_dict.section %}
+<section class="section">
+  <div class="container">
+    <div class="section__content">
+
+      {% if section.title %}
+      <h2 class="section__title">{{ section.title }}</h2>
+      {% endif %}
+
+      {% if section.team %}
+      <div class="flex flex--wrap flex--col-3">
+        {% for person in section.team %}
+        <div class="cell card">
+          <div class="card__inside">
+            <h3 class="card__heading">{{ person.first_name }}{% if person.last_name %} {{ person.last_name }}{% endif %}</h3>
+            {% if person.bio %}
+            <div class="card__copy">
+              {{ person.bio | markdownify }}
+            </div>
+            {% endif %}
+            {% if person.photo %}
+            <figure class="card__media">
+              <img src="{{ person.photo | relative_url }}" alt="{{ person.first_name }}{% if person.last_name %} {{ person.last_name }}{% endif %} Photo" />
+            </figure>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>

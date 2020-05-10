@@ -1,0 +1,46 @@
+/* Flex grid */
+.flex {
+  display: flex;
+  margin-left: -1em;
+  margin-right: 1em;
+}
+
+.flex--middle {
+  align-items: center;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex--swap {
+  flex-direction: row-reverse;
+}
+
+.cell {
+  box-sizing: border-box;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.flex--col-2 {
+  .cell {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+.flex--col-3 {
+  .cell {
+    flex-basis: 33.333%;
+    max-width: 33.333%;
+  }
+}
+
+.flex--col-4 {
+  .cell {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+

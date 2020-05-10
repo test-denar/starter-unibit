@@ -1,0 +1,47 @@
+/**
+ * Helper classes
+ */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 66.667em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+/* Background image */
+.has-bg-image {
+  position: relative;
+}
+
+.bg-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: .75;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Text Alignment */
+.align--center {
+  text-align: center;
+}
+
+.align--right {
+  text-align: right;
+}
+
+/* Text meant only for screen readers */
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}

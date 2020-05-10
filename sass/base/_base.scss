@@ -1,0 +1,53 @@
+/**
+ * General
+ */
+html {
+  font-family: $font-family-base;
+  font-size: 112.5%;
+}
+
+body {
+  background-color: $white;
+  color: $grayish-blue;
+  line-height: 1.66667;
+}
+
+a {
+  color: $blue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $grayish-blue-dark;
+  line-height: 1.2;
+
+  a {
+    color: inheirt;
+  }
+}
+
+p {
+  margin: 0 0 1.5em;
+}
+
+
+/* Media */
+embed,
+iframe,
+object,
+video {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}

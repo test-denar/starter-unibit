@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar" aria-label="Main Navigation">
+
+      <a class="sr-only" href="#content">Skip to main content</a>
+
+      {% if site.params.header.logo %}
+      <a class="navbar__logo" href="{{ '/' | relative_url }}"><img src="{{ site.params.header.logo | relative_url }}" alt="{{ site.params.header.title }}" /></a>
+      {% else %}
+      <a class="navbar__title" href='{{ "/" | relative_url }}'>{{ site.params.header.title }}</a>
+      {% endif %}
+
+      {% if site.params.header.has_nav %}
+      <ul class="navbar__menu menu">
+        {% for action in site.params.header.nav_links %}
+        <li {{ classNames('navbar__item', { 'is-active': page.url == action.url }) }}>
+          {% set include_dict = {'action': action} %}
+          {% include "action.html" %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+    </nav>
+  </div>
+</header>
