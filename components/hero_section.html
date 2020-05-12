@@ -7,7 +7,7 @@
 <section {{ classNames('hero', 'section', {'has-bg': section.has_background, 'bg-blue': section.has_background and background_color == 'blue', 'bg-gray': section.has_background and background_color == 'gray'}) }}>
 
   {% if section.has_background and section.background.background_image %}
-  <div class="bg-image" style="background-image: url('{{ section.background.background_image | relative_url }}'); opacity: {{ background_opacity/100 }}; background-size: {{ background_size }}; background-repeat: {{ background_repeat }}"></div>
+  <div class="bg-image" style="background-image: url('{{ section.background.background_image | relative_url }}'); opacity: {{ background_opacity/100.0 }}; background-size: {{ background_size }}; background-repeat: {{ background_repeat }}"></div>
   {% endif %}
 
   <div class="container">

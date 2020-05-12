@@ -14,8 +14,8 @@ input[type="search"],
 input[type="url"],
 select,
 textarea {
-  background: $bg-light-color;
-  border: 0;
+  background: 0;
+  border: 1px solid $border-color;
   border-radius: 3px;
   box-shadow: none;
   box-sizing: border-box;
@@ -68,12 +68,12 @@ textarea {
   }
 
   &:before {
-    border-top-color: $meta-color;
+    border-top-color: $text-color;
     margin-top: .125em;
   }
 
   &:after {
-    border-bottom-color: $meta-color;
+    border-bottom-color: $text-color;
     margin-top: -.75em;
   }
 }

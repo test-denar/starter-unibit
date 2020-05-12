@@ -36,6 +36,12 @@
   text-align: right;
 }
 
+/* Spacing */
+.padding--vertical {
+  padding-bottom: 3.75em;
+  padding-top: 3.75em;
+}
+
 /* Text meant only for screen readers */
 .sr-only {
   clip: rect(1px, 1px, 1px, 1px);

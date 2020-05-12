@@ -10,9 +10,6 @@ sections:
       - label: Get Started
         url: /about
         type: primary
-    has_background: true
-    background:
-      background_color: gray
   - type: features_section
     features:
       - title: Feature 1

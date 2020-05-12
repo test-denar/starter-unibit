@@ -11,6 +11,10 @@
   }
 }
 
+.post__image {
+  margin: 0 0 1.875em;
+}
+
 .post__title {
   a {
     border: 0;
@@ -22,11 +26,12 @@
 .post__meta {
   color: $meta-color;
   font-size: 0.875em;
+  margin: 0 0 0.5em;
 }
 
-.post--full {
-  margin-top: 2.5em;
-  margin-bottom: 2.5em;
+.post__title {
+  font-size: 2em;
+  margin: 0 0 0.9375em;
 }
 
 .section--blog-feed {

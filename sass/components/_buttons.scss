@@ -5,7 +5,7 @@ input[type="reset"],
 .button {
   background-color: $button-primary;
   border: 2px solid $button-primary;
-  border-radius: 3px;
+  border-radius: 5px;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
@@ -26,6 +26,7 @@ input[type="reset"],
   &:focus,
   &:active {
     border-color: $button-primary;
+    opacity: .8;
     outline: 0;
   }
 }
