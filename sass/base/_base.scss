@@ -3,17 +3,29 @@
  */
 html {
   font-family: $font-family-base;
-  font-size: 112.5%;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background-color: $white;
-  color: $grayish-blue;
-  line-height: 1.66667;
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
 }
 
 a {
-  color: $blue;
+  border-bottom: 1px solid transparent;
+  color: $link-color;
+  text-decoration: none;
+  transition: .3s ease;
+
+  &:hover {
+    border-color: currentColor;
+  }
+
 }
 
 h1,
@@ -22,11 +34,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: $grayish-blue-dark;
+  color: $heading-color;
   line-height: 1.2;
 
   a {
-    color: inheirt;
+    color: inherit;
   }
 }
 

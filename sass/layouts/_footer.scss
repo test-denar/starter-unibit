@@ -1,5 +1,5 @@
 .site-footer {
-  border-top: 1px solid $grayish-blue-light;
+  border-top: 1px solid $border-color;
   padding-bottom: 1em;
   padding-top: 1em;
 }
@@ -17,7 +17,7 @@
   margin-bottom: 1em;
 
   li {
-    border-right: 1px solid $grayish-blue-light;
+    border-right: 1px solid $border-color;
     font-size: 0.875em;
     margin-right: 0.75em;
     padding-right: 0.75em;

@@ -1,5 +1,5 @@
 {% set section = include_dict.section %}
-<section class="section">
+<section class="section section--team">
   <div class="container">
     <div class="section__content">
 
@@ -12,14 +12,19 @@
         {% for person in section.team %}
         <div class="cell card">
           <div class="card__inside">
-            <h3 class="card__heading">{{ person.first_name }}{% if person.last_name %} {{ person.last_name }}{% endif %}</h3>
-            {% if person.bio %}
-            <div class="card__copy">
-              {{ person.bio | markdownify }}
+            <div class="card__body">
+              <h3 class="card__heading">{{ person.first_name }}{% if person.last_name %} {{ person.last_name }}{% endif %}</h3>
+              {% if person.bio %}
+              <div class="card__copy">
+                {{ person.bio | markdownify }}
+              </div>
+              {% endif %}
             </div>
-            {% endif %}
+
+
+           
             {% if person.photo %}
-            <figure class="card__media">
+            <figure class="card__media card__media--bottom">
               <img src="{{ person.photo | relative_url }}" alt="{{ person.first_name }}{% if person.last_name %} {{ person.last_name }}{% endif %} Photo" />
             </figure>
             {% endif %}

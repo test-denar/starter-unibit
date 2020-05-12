@@ -13,12 +13,24 @@
 
 .post__title {
   a {
-    text-decoration: none;
+    border: 0;
     color: inherit;
+    text-decoration: none;
   }
+}
+
+.post__meta {
+  color: $meta-color;
+  font-size: 0.875em;
 }
 
 .post--full {
   margin-top: 2.5em;
   margin-bottom: 2.5em;
+}
+
+.section--blog-feed {
+  .card__media {
+    border: 0;
+  }
 }

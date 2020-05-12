@@ -2,11 +2,15 @@
 .flex {
   display: flex;
   margin-left: -1em;
-  margin-right: 1em;
+  margin-right: -1em;
 }
 
 .flex--middle {
   align-items: center;
+}
+
+.flex--center {
+  justify-content: center;
 }
 
 .flex--wrap {

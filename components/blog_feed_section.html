@@ -1,5 +1,5 @@
 {% set section = include_dict.section %}
-<section class="section">
+<section class="section section--blog-feed">
   <div class="container">
     <div class="section__content">
 
@@ -18,29 +18,38 @@
           <div class="card__inside">
 
             {% if post.params.image %}
-            <a class="post__image" href="{{ post.url | relative_url }}">
+            <a class="card__media card__media--top" href="{{ post.url | relative_url }}">
               <img src="{{ post.params.image | relative_url }}" alt="{{ post.params.title }}" />
             </a>
             {% endif %}
 
-          <header class=" card__heading post__header">
-            <p class="post__meta"><time datetime="{{post.date | date_format("%Y-%m-%d %H:%M") }}">{{ post.date | date_format("%B %d, %Y") }}</time></p>
+            <div class="card__body">
 
-            {% if section.title %}
-            <h3 class="post__title"><a href="{{ post.url | relative_url }}">{{ post.params.title }}</a>
-            </h3>
-            {% else %}
-            <h2 class="post__title"><a href="{{ post.url | relative_url }}">{{ post.params.title }}</a>
-            </h2>
-            {% endif %}
+              <header class="card__heading">
+                <p class="post__meta"><time datetime="{{post.date | date_format("%Y-%m-%d %H:%M") }}">{{ post.date | date_format("%B %d, %Y") }}</time></p>
+    
+                {% if section.title %}
+                <h3 class="post__title"><a href="{{ post.url | relative_url }}">{{ post.params.title }}</a>
+                </h3>
+                {% else %}
+                <h2 class="post__title"><a href="{{ post.url | relative_url }}">{{ post.params.title }}</a>
+                </h2>
+                {% endif %}
+    
+              </header>
 
-          </header>
+              {% if post.params.excerpt %}
+              <p class="card__copy">
+                {{ post.params.excerpt }}
+              </p>
+              {% endif %}
 
-          {% if post.params.excerpt %}
-          <p class="card__copy post__excerpt">
-            {{ post.params.excerpt }}
-          </p>
-          {% endif %}
+
+            </div>
+
+          
+
+          
 
           </div>
 

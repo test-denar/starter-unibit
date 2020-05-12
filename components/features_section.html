@@ -4,13 +4,13 @@
 
     {% if section.title %}
     <div class="section__content">
-      <h2 class="section__title">{{ section.title }}</h2>
+      <h2 class="section__title text--center">{{ section.title }}</h2>
     </div>
     {% endif %}
 
     {% if section.features %}
     {% for feature in section.features %}
-    <div {{ classNames('section__content', 'flex', 'flex--middle', 'flex--col-2', { 'flex--swap': feature.image_position == 'right', 'align--center': feature.align == 'center', 'align--right': feature.align == 'right' }) }}>
+    <div {{ classNames('section__content', 'flex', 'flex--middle', 'flex--col-2', { 'flex--swap': feature.image_position == 'right', 'text--center': feature.align == 'center', 'text--right': feature.align == 'right' }) }}>
 
       {% if feature.image %}
       <div class="section__media cell">

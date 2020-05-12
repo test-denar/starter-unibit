@@ -12,10 +12,13 @@
 @import "components/menus";
 @import "components/grids";
 @import "components/cards";
-@import "components/sections";
+
 
 // Layouts
 @import "layouts/site";
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/post";
+@import "layouts/section";
+@import "layouts/section-hero";
+@import "layouts/section-team";
