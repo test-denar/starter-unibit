@@ -9,24 +9,21 @@
 
       <div class="flex flex--wrap flex--col-3">
 
-        {% set posts_all = getPages("/blog") | where("basename", "!=", "index.md") %}
-
-        {% set posts_sorted = posts_all | sort(true, true, "date") if section.show_recent else posts_all %}
-
-        {% set posts_filtered = posts_sorted | where( "author.slug", section.author.slug ) if section.author.slug else posts_sorted %}
-
-        {% set posts_display = posts_filtered | slice_array(0, section.recent_count) if section.recent_count else posts_filtered %}
+        {% set posts_all = getPages("/blog") | where("url", "!=", "blog/") | where("url", "!=", "/blog/") %}
+        {% set posts_sorted = posts_all | sort(true, true, "date") %}
+        {% set posts_display = posts_sorted | slice_array(0, section.recent_count | default(3, true)) if section.show_recent else posts_sorted %}
 
         {% for post in posts_display %}
         <article class="cell card">
+          <div class="card__inside">
 
-          {% if post.params.image %}
-          <a class="post__image" href="{{ post.url | relative_url }}">
-            <img src="{{ post.params.image | relative_url }}" alt="{{ post.params.title }}" />
-          </a>
-          {% endif %}
+            {% if post.params.image %}
+            <a class="post__image" href="{{ post.url | relative_url }}">
+              <img src="{{ post.params.image | relative_url }}" alt="{{ post.params.title }}" />
+            </a>
+            {% endif %}
 
-          <header class="post__header">
+          <header class=" card__heading post__header">
             <p class="post__meta"><time datetime="{{post.date | date_format("%Y-%m-%d %H:%M") }}">{{ post.date | date_format("%B %d, %Y") }}</time></p>
 
             {% if section.title %}
@@ -37,31 +34,15 @@
             </h2>
             {% endif %}
 
-            <p class="post__byline">
-              {% if post.params.author %}
-              by <a href="{{ '/blog/author/' | append( post.params.author.slug ) | relative_url }}">{{ post.params.author.first_name }}{% if post.params.author.last_name %} {{ post.params.author.last_name }}{% endif %}</a>
-              {% endif %}
-
-              {% if post.params.categories %}
-              in
-              {% set include_dict = {'categories': post.params.categories} %}
-              {% include "post_categories.html" %}
-              {% endif %}
-            </p>
           </header>
 
           {% if post.params.excerpt %}
-          <p class="post__excerpt">
+          <p class="card__copy post__excerpt">
             {{ post.params.excerpt }}
           </p>
           {% endif %}
 
-          {% if post.params.tags %}
-          <footer class="post__footer">
-            {% set include_dict = {'tags': post.params.tags} %}
-            {% include "post_tags.html" %}
-          </footer>
-          {% endif %}
+          </div>
 
         </article>
         {% endfor %}

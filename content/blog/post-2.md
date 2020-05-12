@@ -2,20 +2,6 @@
 title: Non Minor, Inquit, Voluptas Percipitur Ex Vilissimis
 date: 2020-04-30
 slug: post-2
-author:
-  type: person
-  first_name: Miles
-  last_name: Tone
-  photo: images/miles-tone.jpg
-  bio: >-
-    Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Massa placerat duis ultricies lacus. Amet justo donec enim diam. Ut consequat semper viverra nam libero justo.
-  slug: miles-tone
-categories:
-  - type: category
-    slug: tutorials
-    title: Tutorials
-tags:
-  - React
 image: images/2.png
 excerpt: >-
   Quae diligentissime contra Aristonem dicuntur a Chryippo. Videamus igitur sententias eorum, tum ad verba redeamus. Levatio igitur vitiorum magna.

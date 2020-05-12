@@ -10,17 +10,14 @@
 }
 
 /* Background image */
-.has-bg-image {
+.has-bg {
   position: relative;
 }
 
 .bg-image {
   background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
   bottom: 0;
   left: 0;
-  opacity: .75;
   position: absolute;
   right: 0;
   top: 0;

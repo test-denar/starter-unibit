@@ -6,7 +6,6 @@ sections:
     title: Who We Are
     subtitle: >-
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus quis lorem malesuada luctus.
-    background_color: white
   - type: content_section
     content: >-
       Nisi porta lorem mollis aliquam ut porttitor. Pellentesque dignissim enim sit amet venenatis urna cursus eget nunc. Dui nunc mattis enim ut tellus. Eu sem integer vitae justo eget magna fermentum. Habitant morbi tristique senectus et netus et malesuada fames. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant.
@@ -16,29 +15,25 @@ sections:
       Aliquet lectus proin nibh nisl condimentum id venenatis a condimentum. Ac felis donec et odio pellentesque. Sem nulla pharetra diam sit amet. Egestas tellus rutrum tellus pellentesque eu. Auctor augue mauris augue neque. Lectus arcu bibendum at varius vel pharetra. Enim sed faucibus turpis in eu mi bibendum neque egestas.
   - type: team_section
     team:
-      - type: person
-        first_name: Miles
+      - first_name: Miles
         last_name: Tone
         photo: images/miles-tone.jpg
         bio: >-
           Aliquam vestibulum morbi blandit cursus risus at ultrices mi. Massa placerat duis ultricies lacus. Amet justo donec enim diam. Ut consequat semper viverra nam libero justo.
         slug: miles-tone
-      - type: person
-        first_name: Dianne
+      - first_name: Dianne
         last_name: Ameter
         photo: images/dianne-ameter.jpg
         bio: >-
           Enim sit amet venenatis urna cursus eget nunc scelerisque viverra. Ligula ullamcorper malesuada proin libero nunc consequat interdum. Magna eget est lorem ipsum. Adipiscing elit ut aliquam purus sit amet luctus.
         slug: dianne-ameter
-      - type: person
-        first_name: Eleanor
+      - first_name: Eleanor
         last_name: Carr
         photo: images/eleanor-carr.jpg
         bio: >-
           Enim sit amet venenatis urna cursus eget nunc scelerisque viverra. Ligula ullamcorper malesuada proin libero nunc consequat interdum. Magna eget est lorem ipsum. Adipiscing elit ut aliquam purus sit amet luctus.
         slug: eleanor-carr
-      - type: person
-        first_name: Gordon
+      - first_name: Gordon
         last_name: Norman
         photo: images/gordon-norman.jpg
         bio: >-

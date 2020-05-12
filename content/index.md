@@ -11,7 +11,13 @@ sections:
         url: /about
         type: primary
     image: images/hero.png
-    background_color: blue
+    has_background: true
+    background:
+      background_color: blue
+      background_image: images/hero-background.png
+      background_image_opacity: 50
+      background_image_size: auto
+      background_image_repeat: repeat
   - type: content_section
     title: Content Section Title
     content: >-

@@ -132,23 +132,6 @@ models:
         label: Slug
         description: The slug of the post
         required: true
-      - type: reference
-        name: author
-        label: Author
-        description: The author of the post
-        models: [person]
-      - type: list
-        name: categories
-        label: Categories
-        items:
-          type: reference
-          models: [category]
-      - type: list
-        name: tags
-        label: Tags
-        description: Post
-        items:
-          type: string
       - type: image
         name: image
         label: Featured Image
@@ -202,17 +185,6 @@ models:
         name: recent_count
         label: Number of posts to show
         description: Leave empty to show all posts
-      - type: reference
-        name: category
-        label: Category
-        models: [category]
-      - type: string
-        name: tag
-        label: Tag
-      - type: reference
-        name: author
-        label: Author
-        models: [person]
   contact_section:
     type: object
     label: Contact Section
@@ -265,20 +237,48 @@ models:
         name: image
         label: Image
         description: The image of the section
-      - type: enum
-        name: background_color
-        label: Background Color
-        options:
-          - white
-          - gray
-          - blue
-        default: white
-        description: The background color of the section
-        required: true
-      - type: image
-        name: background_image
-        label: Background Image
-        description: The image displayed in the background of the section
+      - type: boolean
+        name: has_background
+        label: Enable section background
+        default: false
+      - type: object
+        name: background
+        label: Background Configuration
+        fields:
+          - type: enum
+            name: background_color
+            label: Background Color
+            options:
+              - white
+              - gray
+              - blue
+            default: white
+            description: The background color of the section
+          - type: image
+            name: background_image
+            label: Background Image
+            description: The image displayed in the background of the section
+          - type: number
+            name: background_image_opacity
+            label: Background Image Opacity
+            description: An integer between 0 and 100. A lower value makes the image more transparent.
+          - type: enum
+            name: background_image_size
+            label: Background Image Size
+            options:
+              - auto
+              - contain
+              - cover
+            default: cover
+            description: The size of the background image
+          - type: enum
+            name: background_image_repeat
+            label: Background Image Repeat
+            options:
+              - repeat
+              - no-repeat
+            default: no-repeat
+            description: Should the background image be repeated?
   team_section:
     type: object
     label: Team Section
@@ -292,8 +292,7 @@ models:
         name: team
         label: Team
         items:
-          type: reference
-          models: [person]
+          type: person
   feature:
     type: object
     label: Feature
@@ -378,19 +377,6 @@ models:
       - type: markdown
         name: bio
         label: Bio
-      - type: string
-        name: slug
-        label: Slug
-        required: true
-  category:
-    type: object
-    label: Category
-    labelField: title
-    fields:
-      - type: string
-        name: title
-        label: Title
-        required: true
       - type: string
         name: slug
         label: Slug

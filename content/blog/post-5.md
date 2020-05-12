@@ -2,24 +2,6 @@
 title: Non Minor, Inquit, Voluptas Percipitur Ex Vilissimis
 date: 2020-05-10
 slug: post-5
-author:
-  type: person
-  first_name: Dianne
-  last_name: Ameter
-  photo: images/dianne-ameter.jpg
-  bio: >-
-    Enim sit amet venenatis urna cursus eget nunc scelerisque viverra. Ligula ullamcorper malesuada proin libero nunc consequat interdum. Magna eget est lorem ipsum. Adipiscing elit ut aliquam purus sit amet luctus.
-  slug: dianne-ameter
-categories:
-  - type: category
-    slug: tutorials
-    title: Tutorials
-  - type: category
-    slug: development
-    title: Development
-tags:
-  - Gatsby
-  - Netlify
 image: images/5.png
 excerpt: >-
   Estne, quaeso, inquam, sitienti in bibendo voluptas? Iam in altera philosophiae parte. Quem Tiberina descensio festo illo die tanto gaudio affecit, quanto.

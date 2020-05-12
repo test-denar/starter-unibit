@@ -10,7 +10,7 @@
 
     {% if section.features %}
     {% for feature in section.features %}
-    <div {{ classNames('section__content', 'flex', 'flex--middle', { 'flex--swap': feature.image_position == 'right', 'align--center': feature.align == 'center', 'align--right': feature.align == 'right' }) }}>
+    <div {{ classNames('section__content', 'flex', 'flex--middle', 'flex--col-2', { 'flex--swap': feature.image_position == 'right', 'align--center': feature.align == 'center', 'align--right': feature.align == 'right' }) }}>
 
       {% if feature.image %}
       <div class="section__media cell">

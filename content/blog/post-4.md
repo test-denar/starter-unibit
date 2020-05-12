@@ -2,21 +2,6 @@
 title: Non Minor, Inquit, Voluptas Percipitur Ex Vilissimis
 date: 2020-05-06
 slug: post-4
-author:
-  type: person
-  first_name: Gordon
-  last_name: Norman
-  photo: images/gordon-norman.jpg
-  bio: >-
-    Sagittis nisl rhoncus mattis rhoncus urna neque viverra. In est ante in nibh mauris cursus mattis molestie. Orci porta non pulvinar neque laoreet suspendisse interdum.
-  slug: gordon-norman
-categories:
-  - type: category
-    slug: news
-    title: News
-tags:
-  - Jamstack
-  - Stackbit
 image: images/4.png
 excerpt: >-
   Itaque hoc frequenter dici solet a vobis, non intellegere nos, quam dicat Epicurus voluptatem. Sin kakan malitiam dixisses, ad aliud nos unum certum vitium consuetudo Latina traduceret.
