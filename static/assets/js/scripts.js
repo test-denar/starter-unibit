@@ -8,3 +8,4 @@ if (navToggle) {
     });
   }
 }
+document.body.classList.remove('js-nav-open');

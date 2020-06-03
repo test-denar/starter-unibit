@@ -15,10 +15,7 @@
       <h1 class="post__title">{{ page.params.title }}</h1>
       <div class="post__meta">
         On <time datetime="{{page.date | date_format("%Y-%m-%d %H:%M") }}">{{ page.date | date_format("%B %d, %Y") }}</time>
-        {% if page.params.author %}
-        {% set author = getData(page.params.author) %}
-        by {{ author.first_name }} {{ author.last_name }}
-        {% endif %}
+        {% if page.params.author %}{% set author = getData(page.params.author) %} by <a href="{{ '/blog/author/' | append( author.slug ) | relative_url }}">{{ author.first_name }} {{ author.last_name }}</a>{% endif %}
       </div>
     </header>
 

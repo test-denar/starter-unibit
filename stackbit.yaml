@@ -442,4 +442,4 @@ models:
       - type: boolean
         name: new_window
         label: Open in new tab/window
-        default: true
+        default: false

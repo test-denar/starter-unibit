@@ -37,10 +37,7 @@
             {% endif %}
             <footer class="card__footer">
               On <time datetime="{{post.date | date_format("%Y-%m-%d %H:%M") }}">{{ post.date | date_format("%B %d, %Y") }}</time>
-              {% if post.author %}
-              {% set author = getData(post.params.author) %}
-              by {{ author.first_name }} {{ author.last_name }}
-              {% endif %}
+              {% if post.params.author %}{% set author = getData(post.params.author) %} by <a href="{{ '/blog/author/' | append( author.slug ) | relative_url }}">{{ author.first_name }} {{ author.last_name }}</a>{% endif %}
             </footer>
           </div>
         </div>

@@ -50,12 +50,16 @@
 .section--features {
   .cell {
     max-width: $width-md;
+
+    &:only-child {
+      flex: 0 0 100%;
+    }
   }
 }
 
 .hero {
   &:first-child {
-    &.section--pb-none {
+    &:not(.section--padding) {
       margin-bottom: 2.25rem;
       padding-bottom: 0;
     }

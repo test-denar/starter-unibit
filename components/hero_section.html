@@ -6,7 +6,7 @@
 {% set background_size = background.background_image_size | default('cover', true) %}
 {% set background_repeat = background.background_image_repeat | default('no-repeat', true) %}
 
-<section {{ classNames('section', 'hero', {'bg-image': section.has_background and background.background_image, 'inverse bg-blue': section.has_background and background_color == 'blue', 'bg-gray': section.has_background and background_color == 'gray', 'section--pb-none': not section.has_background and not section.image}) }}>
+<section {{ classNames('section', 'hero', {'bg-image': section.has_background and background.background_image, 'inverse bg-blue': section.has_background and background_color == 'blue', 'bg-gray': section.has_background and background_color == 'gray', 'section--padding': section.has_background or section.image}) }}>
 
   {% if section.has_background and background.background_image %}
   <div class="bg-image__image" style="background-image: url('{{ background.background_image | relative_url }}'); opacity: {{ background_opacity }}; background-size: {{ background_size }}; background-repeat: {{ background_repeat }}"></div>

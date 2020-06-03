@@ -5,7 +5,7 @@ sections:
   - type: hero_section
     title: Features
     subtitle: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus quis lorem malesuada luctus.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     align: center
   - type: features_section
     features:
