@@ -1,63 +1,53 @@
 {% set section = include_dict.section %}
-<section class="section section--blog-feed">
-  <div class="container">
-    <div class="section__content">
+<section class="section section--posts">
 
-      {% if section.title %}
-      <h2 class="section__title">{{ section.title }}</h2>
-      {% endif %}
+  {% if section.title %}
+  <div class="container container--md align-center">
+    <h2 class="section__title">{{ section.title }}</h2>
+  </div>
+  {% endif %}
 
-      <div class="flex flex--wrap flex--col-3">
+  <div class="container container--lg">
+    <div class="flex flex--col-3">
 
-        {% set posts_all = getPages("/blog") | where("url", "!=", "blog/") | where("url", "!=", "/blog/") %}
-        {% set posts_sorted = posts_all | sort(true, true, "date") %}
-        {% set posts_display = posts_sorted | slice_array(0, section.recent_count | default(3, true)) if section.show_recent else posts_sorted %}
+      {% set posts_all = getPages("/blog") %}
+      {% set posts_sorted = posts_all | sort(true, true, "date") %}
+      {% set posts_display = posts_sorted | slice_array(0, section.recent_count | default(3, true)) if section.show_recent else posts_sorted %}
 
-        {% for post in posts_display %}
-        <article class="cell card">
-          <div class="card__inside">
-
-            {% if post.params.image %}
-            <a class="card__media card__media--top" href="{{ post.url | relative_url }}">
-              <img src="{{ post.params.image | relative_url }}" alt="{{ post.params.title }}" />
-            </a>
-            {% endif %}
-
-            <div class="card__body">
-
-              <header class="">
-                <p class="card__meta"><time datetime="{{post.date | date_format("%Y-%m-%d %H:%M") }}">{{ post.date | date_format("%B %d, %Y") }}</time></p>
-    
-                {% if section.title %}
-                <h3 class="card__heading"><a href="{{ post.url | relative_url }}">{{ post.params.title }}</a>
-                </h3>
-                {% else %}
-                <h2 class="card__heading"><a href="{{ post.url | relative_url }}">{{ post.params.title }}</a>
-                </h2>
-                {% endif %}
-    
-              </header>
-
-              {% if post.params.excerpt %}
-              <p class="card__copy">
-                {{ post.params.excerpt }}
-              </p>
+      {% for post in posts_display %}
+      <article class="cell">
+        <div class="card">
+          {% if post.params.image %}
+          <a class="card__media card__media--top" href="{{ post.url | relative_url }}">
+            <img src="{{ post.params.image | relative_url }}" alt="{{ post.params.title }}" />
+          </a>
+          {% endif %}
+          <div class="card__body">
+            <header class="card__header">
+              {% if section.title %}
+              <h3 class="h4 card__title"><a href="{{ post.url | relative_url }}">{{ post.params.title }}</a></h3>
+              {% else %}
+              <h2 class="h4 card__title"><a href="{{ post.url | relative_url }}">{{ post.params.title }}</a></h2>
               {% endif %}
-
-
+            </header>
+            {% if post.params.excerpt %}
+            <div class="card__copy">
+              <p>{{ post.params.excerpt }}</p>
             </div>
-
-          
-
-          
-
+            {% endif %}
+            <footer class="card__footer">
+              On <time datetime="{{post.date | date_format("%Y-%m-%d %H:%M") }}">{{ post.date | date_format("%B %d, %Y") }}</time>
+              {% if post.author %}
+              {% set author = getData(post.params.author) %}
+              by {{ author.first_name }} {{ author.last_name }}
+              {% endif %}
+            </footer>
           </div>
-
-        </article>
-        {% endfor %}
-
-      </div>
+        </div>
+      </article>
+      {% endfor %}
 
     </div>
   </div>
+
 </section>

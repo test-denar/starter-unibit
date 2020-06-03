@@ -1,8 +1,11 @@
-/* Flex grid */
+/**
+ * Grids
+ */
 .flex {
   display: flex;
-  margin-left: -1em;
-  margin-right: -1em;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
 }
 
 .flex--middle {
@@ -13,38 +16,36 @@
   justify-content: center;
 }
 
-.flex--wrap {
-  flex-wrap: wrap;
-}
-
-.flex--swap {
-  flex-direction: row-reverse;
-}
-
 .cell {
   box-sizing: border-box;
-  padding-left: 1em;
-  padding-right: 1em;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  width: 100%;
 }
 
 .flex--col-2 {
   .cell {
-    flex-basis: 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 }
 
 .flex--col-3 {
   .cell {
-    flex-basis: 33.333%;
+    flex: 0 0 33.333%;
     max-width: 33.333%;
   }
 }
 
-.flex--col-4 {
-  .cell {
-    flex-basis: 25%;
-    max-width: 25%;
+@include media-breakpoint-down(md) {
+  .flex--col-2,
+  .flex--col-3 {
+    .cell {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
   }
 }
-

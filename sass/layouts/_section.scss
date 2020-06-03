@@ -1,57 +1,121 @@
+/**
+ * Content Sections
+ */
 .section {
-  margin-bottom: 3.75em;
+  margin-bottom: 3.75rem;
 
   &:first-child {
-    padding-top: 3.75em;
-
+    padding-top: 3.75rem;
   }
-}
 
-.section__media,
-.section__content {
-  position: relative;
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 3.75em;
+  }
+
+  .container + .container {
+    margin-top: 2.25rem;
+  }
 }
 
 .bg-blue,
 .bg-gray,
-.has-bg-image {
+.has-bg {
   padding-bottom: 3.75em;
   padding-top: 3.75em;
 }
 
 .bg-blue {
-  background-color: $bg-dark-color;
-  color: $text-inverse-color;
-
-  h1 {
-    color: $text-inverse-color;
-  }
-
-  .button--secondary {
-    border-color: #fff;
-  }
-
-
-
-
+  background-color: $strong-blue;
 }
 
 .bg-gray {
-  background-color: $bg-light-color;
+  background-color: $very-light-gray;
 }
 
-.section__cta {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.section__media,
+.section__body {
+  position: relative;
+}
 
+.section__actions {
   a {
-    margin-bottom: 1em;
-    margin-right: 1em;
+    &:not(.btn) {
+      font-weight: 700;
+    }
+  }
+}
+
+.hero,
+.section--features {
+  .cell {
+    max-width: $width-md;
+  }
+}
+
+.hero {
+  &:first-child {
+    &.section--pb-none {
+      margin-bottom: 2.25rem;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.section--features {
+  .flex {
+    margin-bottom: 3.75rem;
+  }
+}
+
+.section--team,
+.section--posts {
+  .cell {
+    margin-bottom: 1.5rem;
+    max-width: $width-sm;
+  }
+}
+
+.section--team {
+  .card__media {
+    margin-top: auto;
+    padding-top: 100%;
+    position: relative;
+  
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.section--cta {
+  .bg-blue,
+  .bg-gray {
+    border-radius: 3px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .section__media {
+    &--right {
+      order: 1;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .section__media {
+    margin-bottom: 1.5rem;
+  }
+
+  .section--team,
+  .section--posts {
+    .flex {
+      justify-content: center;
+    }
   }
 }

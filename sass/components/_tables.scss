@@ -1,5 +1,8 @@
+/**
+ * Tables
+ */
 table {
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid $light-gray;
   border-collapse: collapse;
   border-spacing: 0;
   line-height: 1.5;
@@ -10,31 +13,31 @@ table {
 }
 
 caption {
-  color: $meta-color;
+  color: $gray;
   font-size: 0.875em;
   font-style: italic;
-  margin-bottom: 1em;
+  margin-bottom: 0.75rem;
   text-align: left;
 }
 
 th,
 td {
-  border-top: 1px solid $border-color;
+  border-top: 1px solid $light-gray;
   padding: 0.5em 5px;
 }
 
 th {
-  color: $heading-color;
+  color: $very-dark-gray;
   font-weight: 700;
 }
 
 :not(.responsive-table) > table {
-  margin: 0 0 1.875em;
+  margin: 0 0 1.5rem;
 }
 
 .responsive-table {
   display: block;
-  margin: 0 0 1.875em;
+  margin: 0 0 1.5rem;
   overflow-x: auto;
   width: 100%;
 }

@@ -1,7 +1,8 @@
 ---
-title: Non Minor, Inquit, Voluptas Percipitur Ex Vilissimis
-date: 2020-04-25
+title: Utrum Igitur Tibi Litteram Videor An Totas Paginas
 slug: post-1
+date: 2020-04-16
+author: data/team/dianne-ameter.yaml
 image: images/1.png
 excerpt: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ea mala virtuti magnitudine obruebantur. Duo Reges: constructio interrete.

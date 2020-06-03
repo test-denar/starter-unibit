@@ -1,45 +1,30 @@
-
-
-
 // Colors
-$white:     #fff;
-$gray-100:  #f5f6f7;
-$gray-200:  #eceef1;
-$gray-300:  #c0c7d0;
-$gray-400:  #a2aebb;
-$gray-500:  #8594a5;
-$gray-600:  #697a8e;
-$gray-700:  #536171;
-$gray-800:  #3d4854;
-$gray-900:  #282f36;
-$black:     #121519;
-$blue:      #009bd6;
-$dark-blue: #004f6e;
-
-$bg-color:           $white;
-$bg-dark-color:      $dark-blue;
-$bg-light-color:     $gray-100;
-
-$text-color:         $gray-700;
-$text-inverse-color: $white;
-$heading-color:      $gray-900;
-$link-color:         $blue;
-$meta-color:         $gray-500;
-$button-primary:     $blue;
-$border-color:      $gray-200;
-$border-blockquote-color:   $blue;
+$white:           #fff !default;
+$very-light-gray: #f5f6f7 !default;
+$light-gray:      #e1e4e9 !default;
+$gray:            #8594a5 !default;
+$dark-gray:       #536171 !default;
+$very-dark-gray:  #282f36 !default;
+$black:           #000 !default;
+$blue:            #28aaff !default;
+$strong-blue:     #005bc4 !default;
 
 // Typography
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans",Helvetica,sans-serif;
 $font-family-monospace:  Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 $font-family-base:       $font-family-sans-serif;
-$font-size-base: 1rem;
-$line-height-base: 1.625;
 
-// Spacing
-$spacer-base: 1.5em;
-$spacer-sm: 1em;
+// Widths
+$width-xs: 360px !default;
+$width-sm: 460px !default;
+$width-md: 740px !default;
+$width-lg: 1140px !default;
 
-// Containers
-$container-base: 75em;
-$container-md: 50em;
+// Breakpoints
+$media-breakpoints: (
+  xs: 480px,
+  sm: 640px,
+  md: 800px,
+  lg: 960px,
+  xl: 1200px
+) !default;

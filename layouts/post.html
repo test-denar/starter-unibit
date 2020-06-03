@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<article class="post post--full padding--vertical">
+<article class="post">
   <div class="container container--md">
 
     {% if page.params.image %}
@@ -12,11 +12,17 @@
     {% endif %}
 
     <header class="post__header">
-      <p class="post__meta"><time datetime="{{page.date | date_format("%Y-%m-%d %H:%M") }}">{{ page.date | date_format("%B %d, %Y") }}</time></p>
       <h1 class="post__title">{{ page.params.title }}</h1>
+      <div class="post__meta">
+        On <time datetime="{{page.date | date_format("%Y-%m-%d %H:%M") }}">{{ page.date | date_format("%B %d, %Y") }}</time>
+        {% if page.params.author %}
+        {% set author = getData(page.params.author) %}
+        by {{ author.first_name }} {{ author.last_name }}
+        {% endif %}
+      </div>
     </header>
 
-    <div class="post__body">
+    <div class="post__copy">
       {{ page.content }}
     </div>
 

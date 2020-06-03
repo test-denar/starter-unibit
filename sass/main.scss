@@ -1,4 +1,5 @@
 // Abstracts
+@import "abstracts/mixins";
 @import "abstracts/variables";
 
 // Base
@@ -9,17 +10,17 @@
 // Components
 @import "components/forms";
 @import "components/buttons";
+@import "components/icons";
 @import "components/tables";
 @import "components/menus";
 @import "components/grids";
 @import "components/cards";
-
+@import "components/inverse";
+@import "components/banner";
 
 // Layouts
 @import "layouts/site";
 @import "layouts/header";
 @import "layouts/footer";
-@import "layouts/post";
+@import "layouts/post-page";
 @import "layouts/section";
-@import "layouts/section-hero";
-@import "layouts/section-team";

@@ -1,2 +1,2 @@
 {% set action = include_dict.action %}
-<a {{ classNames({'button': action.type != 'link', 'button--secondary': action.type == 'secondary'}) }} href="{{ action.url | relative_url }}" {% if action.new_window %}target="_blank" rel="noopener"{% endif %}>{{ action.label }}</a>
+<a {{ classNames({'btn': action.style != 'link', 'btn--secondary': action.style == 'secondary'}) }} href="{{ action.url | relative_url }}" {% if action.new_window %}target="_blank" rel="noopener"{% endif %}>{{ action.label }}</a>

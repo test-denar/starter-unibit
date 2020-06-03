@@ -1,19 +1,19 @@
 {% set section = include_dict.section %}
-<section class="section">
-  <div class="container">
+<section class="section section--features">
 
-    {% if section.title %}
-    <div class="section__content">
-      <h2 class="section__title text--center">{{ section.title }}</h2>
-    </div>
-    {% endif %}
+  {% if section.title %}
+  <div class="container container--md align-center">
+    <h2 class="section__title">{{ section.title }}</h2>
+  </div>
+  {% endif %}
 
-    {% if section.features %}
+  <div class="container container--lg">
+
     {% for feature in section.features %}
-    <div {{ classNames('section__content', 'flex', 'flex--middle', 'flex--col-2', { 'flex--swap': feature.image_position == 'right', 'text--center': feature.align == 'center', 'text--right': feature.align == 'right' }) }}>
+    <div {{ classNames('flex', 'flex--middle', 'flex--center', 'flex--col-2', { 'align-center': feature.align == 'center', 'align-right': feature.align == 'right' }) }}>
 
       {% if feature.image %}
-      <div class="section__media cell">
+      <div {{ classNames('cell', 'section__media', { 'section__media--right': feature.image_position == 'right' }) }}>
         <img src="{{ feature.image | relative_url }}" alt="{{ feature.title }}" />
       </div>
       {% endif %}
@@ -32,16 +32,16 @@
         </div>
         {% endif %}
         {% if feature.actions %}
-        <div class="section__cta">
+        <div class="section__actions btn-group">
           {% set include_dict = {'actions': feature.actions} %}
-          {% include "cta_buttons.html" %}
+          {% include "section_actions.html" %}
         </div>
         {% endif %}
       </div>
 
     </div>
     {% endfor %}
-    {% endif %}
 
   </div>
+
 </section>
