@@ -12,6 +12,14 @@
     {% endif %}
 
     <header class="post__header">
+
+      {% if page.params.categories %}
+      <div class="post__meta">
+        {% set include_dict = {'categories': page.params.categories} %}
+        {% include "blog_post_categories.html" %}
+      </div>
+      {% endif %}
+
       <h1 class="post__title">{{ page.params.title }}</h1>
       <div class="post__meta">
         On <time datetime="{{page.date | date_format("%Y-%m-%d %H:%M") }}">{{ page.date | date_format("%B %d, %Y") }}</time>

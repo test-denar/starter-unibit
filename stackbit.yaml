@@ -119,6 +119,19 @@ models:
         name: slug
         label: Slug
         required: true
+  category:
+    type: data
+    label: Category
+    folder: categories
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: string
+        name: slug
+        label: Slug
+        required: true
   page:
     type: page
     label: Page
@@ -158,12 +171,20 @@ models:
       - type: date
         name: date
         label: Date
+        description: The publish date of the post
         required: true
       - type: reference
         name: author
         label: Author
         description: The author of the post
         models: [person]
+      - type: list
+        name: categories
+        label: Categories
+        description: The categories of the post
+        items:
+          type: reference
+          models: [category]
       - type: image
         name: image
         label: Featured Image
@@ -216,6 +237,22 @@ models:
       - type: number
         name: recent_count
         label: Number of posts to show
+      - type: boolean
+        name: filter_by_author
+        label: Filter posts by author
+        default: false
+      - type: reference
+        name: author
+        label: Author
+        models: [person]
+      - type: boolean
+        name: filter_by_category
+        label: Filter posts by category
+        default: false
+      - type: reference
+        name: category
+        label: Category
+        models: [category]
   contact_section:
     type: object
     label: Contact Section

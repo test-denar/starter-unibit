@@ -10,9 +10,13 @@
   <div class="container container--lg">
     <div class="flex flex--col-3">
 
-      {% set posts_all = getPages("/blog") %}
+      {% set posts_all = getPages("/blog") | where("layout", "post") %}
+
       {% set posts_sorted = posts_all | sort(true, true, "date") %}
-      {% set posts_display = posts_sorted | slice_array(0, section.recent_count | default(3, true)) if section.show_recent else posts_sorted %}
+
+      {% set posts_by_author = posts_sorted | where( "author", section.author ) if section.filter_by_author else posts_sorted %}
+
+      {% set posts_display = posts_by_author | slice_array(0, section.recent_count | default(3, true)) if section.show_recent else posts_by_author %}
 
       {% for post in posts_display %}
       <article class="cell">
@@ -24,6 +28,12 @@
           {% endif %}
           <div class="card__body">
             <header class="card__header">
+              {% if post.params.categories %}
+              <div class="card__meta">
+                {% set include_dict = {'categories': post.params.categories} %}
+                {% include "blog_post_categories.html" %}
+              </div>
+              {% endif %}
               {% if section.title %}
               <h3 class="h4 card__title"><a href="{{ post.url | relative_url }}">{{ post.params.title }}</a></h3>
               {% else %}
