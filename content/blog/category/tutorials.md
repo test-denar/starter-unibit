@@ -1,14 +1,14 @@
 ---
-title: News
-slug: news
+title: Tutorials
+slug: tutorials
 sections:
   - type: hero_section
-    title: All Posts In News
+    title: All Posts In Tutorials
     align: center
   - type: blog_feed_section
     show_recent: false
     filter_by_author: false
     filter_by_category: true
-    category: data/categories/news.yaml
+    category: data/categories/tutorials.yaml
 layout: advanced
 ---

@@ -1,2 +1,0 @@
-{% set categories = include_dict.categories %}
-{% for category in categories %}{% set category_data = getData(category) %}{% if loop.first %}In {% endif %}{% if loop.index > 1 %}, {% endif %}<a href="{{ '/blog/category/' | append( category_data.slug ) }}">{{ category_data.title }}</a>{% endfor %}

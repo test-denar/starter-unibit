@@ -3,8 +3,7 @@ title: Vos Autem Cum Perspicuis Dubia Debeatis Illustrare
 slug: post-4
 date: 2020-05-30
 author: data/team/dianne-ameter.yaml
-categories:
-  - data/categories/news.yaml
+category: data/categories/news.yaml
 image: images/4.png
 excerpt: >-
   Itaque hoc frequenter dici solet a vobis, non intellegere nos, quam dicat Epicurus voluptatem. Sin kakan malitiam dixisses, ad aliud nos unum certum vitium consuetudo Latina traduceret.

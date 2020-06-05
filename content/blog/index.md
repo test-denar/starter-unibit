@@ -7,5 +7,7 @@ sections:
     align: center
   - type: blog_feed_section
     show_recent: false
+    filter_by_author: false
+    filter_by_category: false
 layout: advanced
 ---

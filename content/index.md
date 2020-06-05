@@ -60,6 +60,8 @@ sections:
     title: What's New
     show_recent: true
     recent_count: 3
+    filter_by_author: false
+    filter_by_category: false
   - type: cta_section
     title: This Is A CTA
     subtitle: >-

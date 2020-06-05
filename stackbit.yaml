@@ -178,13 +178,11 @@ models:
         label: Author
         description: The author of the post
         models: [person]
-      - type: list
-        name: categories
-        label: Categories
-        description: The categories of the post
-        items:
-          type: reference
-          models: [category]
+      - type: reference
+        name: category
+        label: Category
+        description: The category of the post
+        models: [category]
       - type: image
         name: image
         label: Featured Image
@@ -234,6 +232,7 @@ models:
         name: show_recent
         label: Show recent posts
         default: false
+        required: true
       - type: number
         name: recent_count
         label: Number of posts to show
@@ -241,6 +240,7 @@ models:
         name: filter_by_author
         label: Filter posts by author
         default: false
+        required: true
       - type: reference
         name: author
         label: Author
@@ -249,6 +249,7 @@ models:
         name: filter_by_category
         label: Filter posts by category
         default: false
+        required: true
       - type: reference
         name: category
         label: Category
