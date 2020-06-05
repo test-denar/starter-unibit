@@ -10,7 +10,7 @@
   <div class="container container--lg">
     <div class="flex flex--col-3">
 
-      {% set posts_all = getPages("/blog") | where("layout", "post") %}
+      {% set posts_all = getPages("/blog") %}
       {% set posts_sorted = posts_all | sort(true, true, "date") %}
       {% set posts_by_author = posts_sorted | where( "author", section.author ) if section.filter_by_author else posts_sorted %}
       {% set posts_by_category = posts_by_author | where( "category", section.category ) if section.filter_by_category else posts_by_author %}
