@@ -1,6 +1,5 @@
 ---
 title: Privacy and Terms
-slug: terms
 layout: page
 ---
 

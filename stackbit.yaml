@@ -102,6 +102,11 @@ models:
     label: Person
     folder: team
     fields:
+      - type: slug
+        name: slug
+        label: Slug
+        description: The slug of the author page "/blog/author/{slug}"
+        required: true
       - type: string
         name: first_name
         label: First Name
@@ -115,22 +120,19 @@ models:
       - type: markdown
         name: bio
         label: Bio
-      - type: string
-        name: slug
-        label: Slug
-        required: true
   category:
     type: data
     label: Category
     folder: categories
     fields:
+      - type: slug
+        name: slug
+        label: Slug
+        description: The slug of the category page "/blog/category/{slug}"
+        required: true
       - type: string
         name: title
         label: Title
-        required: true
-      - type: string
-        name: slug
-        label: Slug
         required: true
   page:
     type: page
@@ -142,11 +144,6 @@ models:
         name: title
         label: Title
         description: The title of the page
-        required: true
-      - type: string
-        name: slug
-        label: Slug
-        description: The slug of the page
         required: true
       - type: string
         name: excerpt
@@ -163,11 +160,6 @@ models:
         label: Title
         description: The title of the post
         required: true
-      - type: string
-        name: slug
-        label: Slug
-        description: The slug of the post
-        required: true
       - type: date
         name: date
         label: Date
@@ -178,11 +170,13 @@ models:
         label: Author
         description: The author of the post
         models: [person]
-      - type: reference
-        name: category
+      - type: list
+        name: categories
         label: Category
         description: The category of the post
-        models: [category]
+        items:
+          type: reference
+          models: [category]
       - type: image
         name: image
         label: Featured Image
@@ -202,15 +196,6 @@ models:
         label: Title
         description: The title of the page
         required: true
-      - type: string
-        name: slug
-        label: Slug
-        description: The slug of the page
-        required: true
-      - type: string
-        name: excerpt
-        label: Excerpt
-        description: The excerpt of the page displayed in meta data.
       - type: list
         name: sections
         label: Sections
@@ -218,7 +203,14 @@ models:
         items:
           type: model
           labelField: title
-          models: [blog_feed_section, contact_section, content_section, cta_section, features_section, hero_section, team_section]
+          models:
+            - blog_feed_section
+            - contact_section
+            - content_section
+            - cta_section
+            - features_section
+            - hero_section
+            - team_section
   blog_feed_section:
     type: object
     label: Blog Feed Section
@@ -236,23 +228,15 @@ models:
       - type: number
         name: recent_count
         label: Number of posts to show
-      - type: boolean
-        name: filter_by_author
-        label: Filter posts by author
-        default: false
-        required: true
       - type: reference
         name: author
-        label: Author
+        label: Author Filter
+        description: Filter posts by an author
         models: [person]
-      - type: boolean
-        name: filter_by_category
-        label: Filter posts by category
-        default: false
-        required: true
       - type: reference
         name: category
-        label: Category
+        label: Category Filter
+        description: Filter posts by category
         models: [category]
   contact_section:
     type: object
@@ -463,7 +447,7 @@ models:
         name: label
         label: Label
         required: true
-      - type: string
+      - type: url
         name: url
         label: URL
         required: true

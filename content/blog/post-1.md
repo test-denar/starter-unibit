@@ -1,9 +1,10 @@
 ---
 title: Utrum Igitur Tibi Litteram Videor An Totas Paginas
-slug: post-1
 date: 2020-04-16
 author: data/team/dianne-ameter.yaml
-category: data/categories/tutorials.yaml
+categories:
+  - data/categories/tutorials.yaml
+  - data/categories/general.yaml
 image: images/1.png
 excerpt: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ea mala virtuti magnitudine obruebantur. Duo Reges: constructio interrete.

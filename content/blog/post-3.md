@@ -1,9 +1,9 @@
 ---
 title: Cur Ipse Pythagoras Et Aegyptum Lustravit
-slug: post-3
 date: 2020-05-28
 author: data/team/gordon-norman.yaml
-category: data/categories/general.yaml
+categories:
+  - data/categories/general.yaml
 image: images/3.png
 excerpt: >-
   Quis est, qui non oderit libidinosam, protervam adolescentiam? Innumerabilia dici possunt in hanc sententiam, sed non necesse est. Putabam equidem satis, inquit, me dixisse.

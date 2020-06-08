@@ -1,6 +1,5 @@
 ---
 title: Who We Are
-slug: about
 sections:
   - type: hero_section
     title: Who We Are
