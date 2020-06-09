@@ -1,6 +1,5 @@
 ---
 title: Style Guide
-slug: style-guide
 layout: page
 ---
 

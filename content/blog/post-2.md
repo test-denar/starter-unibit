@@ -1,9 +1,10 @@
 ---
 title: Non Minor, Inquit, Voluptas Percipitur Ex Vilissimis
-slug: post-2
 date: 2020-05-25
 author: data/team/miles-tone.yaml
-category: data/categories/news.yaml
+categories:
+  - data/categories/news.yaml
+  - data/categories/general.yaml
 image: images/2.png
 excerpt: >-
   Quae diligentissime contra Aristonem dicuntur a Chryippo. Videamus igitur sententias eorum, tum ad verba redeamus. Levatio igitur vitiorum magna.

@@ -1,6 +1,0 @@
-{% set category = include_dict.category %}
-{% set container_class = include_dict.container_class %}
-<div class="{{ container_class }}">
-  {% set category_data = getData(category) %}
-  In <a href="{{ '/blog/category/' | append( category_data.slug ) }}">{{ category_data.title }}</a>
-</div>

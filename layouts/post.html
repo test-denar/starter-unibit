@@ -14,8 +14,8 @@
     <header class="post__header">
 
       {% if page.params.category %}
-        {% set include_dict = {'category': page.params.category, 'container_class': 'post__meta'} %}
-        {% include "blog_post_category.html" %}
+        {% set include_dict = {'categories': page.params.categories, 'container_class': 'post__meta'} %}
+        {% include "blog_post_categories.html" %}
       {% endif %}
 
       <h1 class="post__title">{{ page.params.title }}</h1>

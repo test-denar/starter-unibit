@@ -1,6 +1,5 @@
 ---
 title: Features
-slug: features
 sections:
   - type: hero_section
     title: Features
