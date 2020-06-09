@@ -27,3 +27,16 @@
 .post__meta {
   margin-bottom: 0.75rem;
 }
+
+.post__footer {
+  margin-top: 2.25rem;
+
+  span {
+    display: inline-block;
+    margin-right: 0.5rem;
+
+    &:before {
+      content: "\0023";
+    }
+  }
+}

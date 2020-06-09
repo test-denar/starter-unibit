@@ -5,6 +5,9 @@ author: data/team/dianne-ameter.yaml
 categories:
   - data/categories/tutorials.yaml
   - data/categories/news.yaml
+tags:
+  - JAMstack
+  - Sourcebit
 image: images/4.png
 excerpt: >-
   Itaque hoc frequenter dici solet a vobis, non intellegere nos, quam dicat Epicurus voluptatem. Sin kakan malitiam dixisses, ad aliud nos unum certum vitium consuetudo Latina traduceret.

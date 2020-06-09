@@ -172,11 +172,17 @@ models:
         models: [person]
       - type: list
         name: categories
-        label: Category
-        description: The category of the post
+        label: Categories
+        description: The categories of the post
         items:
           type: reference
           models: [category]
+      - type: list
+        name: tags
+        label: Tags
+        description: The tags of the post
+        items:
+          type: string
       - type: image
         name: image
         label: Featured Image
@@ -223,11 +229,12 @@ models:
       - type: boolean
         name: show_recent
         label: Show recent posts
+        description: Show the specified number of recent posts. Should not be used with author and category filters.
         default: false
         required: true
       - type: number
         name: recent_count
-        label: Number of posts to show
+        label: Number of recent posts to show
       - type: reference
         name: author
         label: Author Filter

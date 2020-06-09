@@ -21,7 +21,7 @@
           {% endif %}
           <div class="card__body">
             <header class="card__header">
-              <h3 class="h4 card__title">{{ person_data.first_name }}{% if person_data.last_name %} {{ person_data.last_name }}{% endif %}</h3>
+              <h3 class="h4 card__title">{{ person_data.first_name }} {{ person_data.last_name }}</h3>
             </header>
             {% if person_data.bio %}
             <div class="card__copy">
