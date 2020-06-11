@@ -16,6 +16,7 @@ sections:
       - data/team/miles-tone.yaml
       - data/team/dianne-ameter.yaml
       - data/team/eleanor-carr.yaml
+      - data/team/hanson-deck.yaml
       - data/team/gordon-norman.yaml
   - type: cta_section
     title: Join the Team

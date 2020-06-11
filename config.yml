@@ -1,10 +1,10 @@
 baseurl: "/"
-title: "Stackbit New Theme"
+title: "Stackbit Starter Theme"
 page_load_js: "assets/js/scripts.js"
 params:
   description: An ultra customizable generic theme for Stackbit
   header:
-    title: New Theme
+    title: Starter
     has_nav: true
     nav_links:
       - label: Features
@@ -45,7 +45,7 @@ params:
         url: https://www.linkedin.com/
         style: link
         new_window: true
-    content: "&copy; Stackbit-New. All rights reserved."
+    content: "&copy; Stackbit-Starter. All rights reserved."
     links:
       - label: Made with Stackbit.
         url: https://www.stackbit.com

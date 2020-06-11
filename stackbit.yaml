@@ -8,7 +8,7 @@ dataDir: data
 pagesDir: content
 pageLayoutKey: layout
 metadata:
-  title: New
+  title: Starter
   description: An ultra customizable generic theme
   author: Stackbit
   authorURL: 'https://www.stackbit.com'
