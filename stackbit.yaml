@@ -7,6 +7,8 @@ uploadDir: images
 dataDir: data
 pagesDir: content
 pageLayoutKey: layout
+logicFields:
+  - blog_feed_section.recent_count
 metadata:
   title: Starter
   description: An ultra customizable generic theme
