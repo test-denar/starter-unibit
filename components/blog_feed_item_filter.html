@@ -6,7 +6,7 @@
 {% if section_author %}
     {% if post.author %}
         {% set post_author = getData(post.author) %}
-        {% if post_author.slug == section_author.slug %}
+        {% if post_author.id == section_author.id %}
             {% set include_dict = {'blog_feed_section': section, 'post_page': post} %}
             {% include "blog_post_feed_item.html" %}
         {% endif %}
@@ -14,7 +14,7 @@
 {% elif section_category %}
     {% for category in post.categories %}
         {% set post_category = getData(category) %}
-        {% if post_category.slug == section_category.slug %}
+        {% if post_category.id == section_category.id %}
             {% set include_dict = {'blog_feed_section': section, 'post_page': post} %}
             {% include "blog_post_feed_item.html" %}
         {% endif %}

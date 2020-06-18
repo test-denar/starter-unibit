@@ -21,7 +21,11 @@
         <span>On <time datetime="{{page.date | date_format("%Y-%m-%d %H:%M") }}">{{ page.date | date_format("%B %d, %Y") }}</time></span>
         {% if page.params.author %}
           {% set author = getData(page.params.author) %}
-          <span> by <a href="{{ '/blog/author/' | append( author.slug ) | relative_url }}">{{ author.first_name }} {{ author.last_name }}</a></span>
+          {% if author.link %}
+            <span> by <a href="{{ author.link | relative_url }}">{{ author.first_name }} {{ author.last_name }}</a></span>
+          {% else %}
+            <span> by {{ author.first_name }} {{ author.last_name }}</span>
+          {% endif %}
         {% endif %}
       </div>
     </header>
