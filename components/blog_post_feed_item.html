@@ -9,8 +9,10 @@
         {% endif %}
         <div class="card__body">
             <header class="card__header">
-                {% set include_dict = {'categories': post.params.categories, 'container_class': 'card__meta'} %}
-                {% include "blog_post_categories.html" %}
+                {% if post.params.categories %}
+                    {% set include_dict = {'categories': post.params.categories, 'container_class': 'card__meta'} %}
+                    {% include "blog_post_categories.html" %}
+                {% endif %}
                 {% if blog_feed_section.title %}
                     <h3 class="h4 card__title"><a href="{{ post.url | relative_url }}">{{ post.params.title }}</a></h3>
                 {% else %}
