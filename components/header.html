@@ -22,10 +22,12 @@
             </button>
             <ul class="navbar__list menu">
               {% for action in site.params.header.nav_links %}
-              <li {{ classNames('navbar__item', { 'navbar__item--btn': action.style != 'link', 'is-active': page.url == action.url }) }}>
-                {% set include_dict = {'action': action} %}
-                {% include "action.html" %}
-              </li>
+                {% set pageUrl = page.url | trim('/') %}
+                {% set actionUrl = action.url | trim('/') %}
+                <li {{ classNames('navbar__item', { 'navbar__item--btn': action.style != 'link', 'is-active': pageUrl == actionUrl }) }}>
+                  {% set include_dict = {'action': action} %}
+                  {% include "action.html" %}
+                </li>
               {% endfor %}
             </ul>
           </div>
