@@ -9,6 +9,7 @@ pagesDir: content
 pageLayoutKey: layout
 logicFields:
   - blog_feed_section.recent_count
+  - hero_section.background.background_image_opacity
 metadata:
   title: Starter
   description: "Ultra customizable starter. A developers' favorite."
@@ -34,7 +35,7 @@ pageData:
       - "[0].fields.sections.items[0].fields.actions.items[0]"
       - "[0].fields.sections.items[0].fields.actions.items[0].fields.label"
       - "[1]"
-      - "[1].fields.palette"    
+      - "[1].fields.palette"
 models:
   config:
     type: config
