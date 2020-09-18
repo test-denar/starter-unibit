@@ -122,6 +122,7 @@ models:
     type: data
     label: Person
     folder: team
+    labelField: id
     fields:
       - type: string
         name: id
@@ -149,6 +150,7 @@ models:
     type: data
     label: Category
     folder: categories
+    labelField: id
     fields:
       - type: string
         name: id
