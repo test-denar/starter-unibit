@@ -31,7 +31,7 @@
 
     <div class="site-footer__copyright">
       {% if site.params.footer.content %}
-        {{ site.params.footer.content | safe }}
+        <span>{{ site.params.footer.content | safe }}</span>
       {% endif %}
       {% for action in site.params.footer.links %}
         {% set include_dict = {'action': action} %}

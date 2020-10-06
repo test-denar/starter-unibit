@@ -25,6 +25,11 @@
 .site-footer__copyright {
   font-size: 0.8125em;
   width: 100%;
+
+  & > span,
+  & > a {
+    margin-right: 5px;
+  }
 }
 
 @include media-breakpoint-up(xs) {

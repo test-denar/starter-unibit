@@ -1,6 +1,8 @@
 baseurl: "/"
 title: "Stackbit Starter Theme"
-page_load_js: "assets/js/scripts.js"
+init_is: "assets/js/init.js"
+page_load_js: "assets/js/page-load.js"
+page_unload_js: "assets/js/page-unload.js"
 params:
   description: An ultra customizable generic theme for Stackbit
   header:
