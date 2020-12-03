@@ -47,7 +47,8 @@ params:
         url: https://www.linkedin.com/
         style: link
         new_window: true
-    content: "&copy; Stackbit-Starter. All rights reserved."
+    content: >-
+      &copy; Stackbit. All rights reserved. This Jamstack site was created on <a href="https://www.stackbit.com" target="_blank" rel="noopener">Stackbit</a>. Get yours <a href="https://app.stackbit.com/create?theme=starter" target="_blank" rel="noopener">here</a>.
     links:
       - label: Made with Stackbit.
         url: https://www.stackbit.com
