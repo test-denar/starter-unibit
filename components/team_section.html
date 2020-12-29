@@ -16,7 +16,7 @@
         <div class="card team-member">
           {% if person_data.photo %}
           <figure class="card__media card__media--bottom">
-            <img src="{{ person_data.photo | relative_url }}" alt="{{ person_data.first_name }}{% if person_data.last_name %} {{ person_data.last_name }}{% endif %} Photo" />
+            <img src="{{ person_data.photo | relative_url }}" alt="{{ person_data.photo_alt }}" />
           </figure>
           {% endif %}
           <div class="card__body">

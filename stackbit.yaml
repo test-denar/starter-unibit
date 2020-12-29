@@ -46,6 +46,10 @@ models:
     type: config
     label: Site Configuration
     fields:
+      - type: image
+        name: favicon
+        label: Favicon
+        description: A square icon that represents your website
       - type: string
         name: description
         label: Site Description
@@ -71,6 +75,10 @@ models:
         name: logo
         label: Logo
         description: The logo image displayed in the header
+      - type: string
+        name: logo_alt
+        label: Logo Alt Text
+        description: The alt text of the logo image
       - type: boolean
         name: has_nav
         label: Enable Navigation Menu
@@ -147,7 +155,10 @@ models:
         label: Last Name
       - type: image
         name: photo
-        label: Photo
+        label: Image
+      - type: string
+        name: photo_alt
+        label: Image Alt Text
       - type: markdown
         name: bio
         label: Bio
@@ -228,6 +239,10 @@ models:
         name: image
         label: Featured Image
         description: The image shown in the blog post and blog feed
+      - type: string
+        name: image_alt
+        label: Featured Image Alt Text
+        description: The alt text of the featured image
       - type: string
         name: excerpt
         label: Excerpt
@@ -381,6 +396,10 @@ models:
         name: image
         label: Image
         description: The image of the section
+      - type: string
+        name: image_alt
+        label: Image Alt Text
+        description: The alt text of the image
       - type: enum
         name: image_position
         label: Image Position
@@ -471,7 +490,11 @@ models:
       - type: image
         name: image
         label: Image
-        description: The position of the image
+        description: The image of the feature
+      - type: string
+        name: image_alt
+        label: Image Alt Text
+        description: The alt text of the image
       - type: enum
         name: image_position
         label: Image Position
@@ -513,3 +536,8 @@ models:
         name: new_window
         label: Open in new tab/window
         default: false
+      - type: boolean
+        name: no_follow
+        label: No follow
+        default: false
+        description: 'Add rel="nofollow" attribute to the link'

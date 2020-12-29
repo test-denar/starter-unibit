@@ -17,7 +17,7 @@
 
       {% if section.image %}
       <div {{ classNames('cell', 'section__media', { 'section__media--right': section.image_position == 'right' }) }}>
-        <img src="{{ section.image | relative_url }}" alt="{{ section.title }}" />
+        <img src="{{ section.image | relative_url }}" alt="{{ section.image_alt }}" />
       </div>
       {% endif %}
 

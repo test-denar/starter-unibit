@@ -4,7 +4,7 @@
   <div class="card">
     {% if post.params.image %}
     <a class="card__media card__media--top" href="{{ post.url | relative_url }}">
-      <img src="{{ post.params.image | relative_url }}" alt="{{ post.params.title }}" />
+      <img src="{{ post.params.image | relative_url }}" alt="{{ post.params.image_alt }}" />
     </a>
     {% endif %}
     <div class="card__body">

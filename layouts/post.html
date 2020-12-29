@@ -7,7 +7,7 @@
 
     {% if page.params.image %}
     <div class="post__image">
-      <img src="{{ page.params.image | relative_url }}" alt="{{ page.params.title }}" />
+      <img src="{{ page.params.image | relative_url }}" alt="{{ page.params.image_alt }}" />
     </div>
     {% endif %}
 
