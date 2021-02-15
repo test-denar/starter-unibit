@@ -16,7 +16,7 @@ seo:
   description: Estne, quaeso, inquam, sitienti in bibendo voluptas
   extra:
     - name: og:type
-      value: website
+      value: article
       keyName: property
     - name: og:title
       value: Amet Nulla Facilisi Morbi Tempus

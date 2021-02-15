@@ -16,7 +16,7 @@ seo:
   description: Quis est, qui non oderit libidinosam, protervam adolescentiam
   extra:
     - name: og:type
-      value: website
+      value: article
       keyName: property
     - name: og:title
       value: Cur Ipse Pythagoras Et Aegyptum Lustravit

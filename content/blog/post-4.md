@@ -17,7 +17,7 @@ seo:
   description: Itaque hoc frequenter dici solet a vobis, non intellegere nos
   extra:
     - name: og:type
-      value: website
+      value: article
       keyName: property
     - name: og:title
       value: Vos Autem Cum Perspicuis Dubia Debeatis Illustrare
